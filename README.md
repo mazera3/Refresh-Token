@@ -33,3 +33,11 @@
 
 # Tratamento de excesão
 - yarn add express-async-errors
+
+# Autenticação e Token
+- [JSON Web Tokens](https://jwt.io/)
+- Instalar: yarn add jsonwebtoken [jwt](https://www.npmjs.com/package/jsonwebtoken)
+- Tipagem: yarn add @types/jsonwebtoken -D
+- Gerar Key: [Online UUID Generator](https://www.uuidgenerator.net/)
+- Criar arquivo: src/useCases/authenticateUser/AuthenticateUserController.ts
+- Testar com insomnia
