@@ -44,3 +44,10 @@
 
 # Testar o token
 - Criar o middlewares: src/middlewares/ensureAuthenticated.ts
+
+# Criar Refresh Token
+- Acrescentar no schema.prisma nova model RefreshToken
+- Rodar: yarn prisma migrate dev --name create_refresh_token
+- Criar pasta/arquivo: src/provider/GererateRefreshToken.ts
+- Instalar biblioteca dayjs: yarn add dayjs
+- Testar no insomnia.

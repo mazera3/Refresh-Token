@@ -1,6 +1,7 @@
 import { client } from "../../prisma/client";
 import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
+import { GenerateRefreshToken } from "../../provider/GenerateRefreshToken";
 
 interface IRequest {
   username: string;
@@ -29,9 +30,13 @@ class AuthenticateUserUseCase {
       subject: userAlreadyExists.id,
       expiresIn: "20s", // 20 seg
     });
-    return { token };
+    const generateRefreshToken = new GenerateRefreshToken();
+    const refreshToken = await generateRefreshToken.execute(
+      userAlreadyExists.id
+    );
+
+    return { token, refreshToken };
   }
 }
 
 export { AuthenticateUserUseCase };
-// parou em 34:00 minutos
