@@ -41,3 +41,6 @@
 - Gerar Key: [Online UUID Generator](https://www.uuidgenerator.net/)
 - Criar arquivo: src/useCases/authenticateUser/AuthenticateUserController.ts
 - Testar com insomnia
+
+# Testar o token
+- Criar o middlewares: src/middlewares/ensureAuthenticated.ts
